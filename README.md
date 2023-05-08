@@ -59,7 +59,7 @@
 -  Data is preserved in the browser's memory
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo Link](https://alishahsafdari.github.io/To-Do-list/dist/)
+- [Live Demo Link](https://alishahsafdari.github.io/Todo-List-Best-Practice-/dist/)
 
 
 ## 💻 Getting Started <a name="getting-started"></a>
