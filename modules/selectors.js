@@ -8,4 +8,5 @@ export default class Selector {
  listclick = document.querySelector('.todo_list');
 
  input = document.querySelector('#input');
+
 }

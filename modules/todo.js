@@ -1,6 +1,7 @@
 import { parseInt } from 'lodash';
 import Selector from './selectors.js';
 import checkStatus from './statusCheck.js';
+import Task from './Task.js';
 
 const ObjectSelec = new Selector();
 export default class Todo {
@@ -41,11 +42,11 @@ export default class Todo {
     const todo = ObjectSelec.input.value;
     if (!todo) return;
     if (this.todos.length === 0) {
-      const myTodo = { id: 1, task: todo, status: false };
+      const myTodo = new Task(1, todo, false);
       this.todos.push(myTodo);
     } else {
       const index = this.todos.length + 1;
-      const myTodo = { id: index, task: todo, status: false };
+      const myTodo = new Task(index, todo, false);
       this.todos.push(myTodo);
     }
     localStorage.setItem('todos', JSON.stringify(this.todos));
@@ -53,7 +54,7 @@ export default class Todo {
     this.dispaly();
   }
 
-  deletTask = async (e) => {
+  deletTask = (e) => {
     const btndelete = e.target.closest('.js-delete');
     if (!btndelete) return;
     const { id } = btndelete.closest('li').dataset;
